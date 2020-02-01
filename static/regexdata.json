@@ -290,5 +290,33 @@
         ],
         "embedHeight": 300,
         "tags" : ["ssn","number","id"]
+    },
+    {
+        "id": "jira-ticket",
+        "title": "Jira issue ticket",
+        "tagline": "match a Jira issue ticket number",
+        "firstdescr": "Project name and ticket issue number in the format PRJ-123.",
+        "seconddescr": "This expression can be used to find or validate mentation of Jira issue ticket number",
+        "regex": "(?<!([A-Z]{1,10})-?)[A-Z]+-\\d+",
+        "flag": "gm",
+        "matchText": [
+            "DAT-123",
+            "555-666",
+            "aka-48",
+            "aaa-bbb",
+            "PRJ-666",
+            "DAT-PRJ-123",
+            "TST 000"
+        ],
+        "cheatRegex": [
+            "/(?<![aeiou])\\w/",
+            "/[A-Z]/",
+            "/(hello){1,3}/",
+            "/(hard)?work/",
+            "/ab+c/",
+            "/\\d/"
+        ],
+        "embedHeight": 300,
+        "tags" : ["jira"]
     }
 ]
